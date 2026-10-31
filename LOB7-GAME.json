@@ -1,0 +1,21 @@
+{
+  "title": "Lumen Reef",
+  "description": "Skim danger to charge your glow, purify three tides with radiant pulses, and outshine the Gloom Maw in this bioluminescent arcade dive.",
+  "entrypoint": "index.html",
+  "license": "MIT",
+  "genre": ["arcade", "action"],
+  "themes": ["underwater", "bioluminescence", "score attack"],
+  "controls": [
+    "WASD or Arrow keys: swim",
+    "Mouse or touch drag: swim",
+    "Space or glow button: pulse",
+    "P or Escape: pause",
+    "M: toggle sound"
+  ],
+  "credits": [
+    "Designed and developed with Kimi for Kimi Games.",
+    "Original Canvas artwork, animation and synthesized audio created for this game.",
+    "No third-party runtime libraries or external assets."
+  ],
+  "cover": "art/cover.png"
+}

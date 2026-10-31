@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#031d2a">
+  <meta name="description" content="Skim danger, gather light and bring a luminous reef back to life.">
+  <title>Lumen Reef</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23031d2a'/%3E%3Cpath d='M8 33Q22 11 32 27Q42 11 56 33Q43 29 36 43L32 54L28 43Q21 29 8 33' fill='%237fffe2'/%3E%3C/svg%3E">
+  <style>/*__STYLES__*/</style>
+</head>
+<body>
+  <main id="app">
+    <canvas id="game" role="img" aria-label="Lumen Reef game area"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header id="hud" class="hud hidden" aria-label="Game status">
+      <div class="hud-cluster hud-left">
+        <div class="mini-brand">LUMEN <span>REEF</span></div>
+        <div id="hearts" class="hearts" aria-label="Health"></div>
+      </div>
+      <div class="tide-panel">
+        <span id="tideLabel" class="eyebrow">TIDE 1 / 3</span>
+        <strong id="objective">0 / 8</strong>
+      </div>
+      <div class="hud-cluster hud-right">
+        <div class="score-panel"><span class="eyebrow" data-i18n="score">SCORE</span><strong id="score">000000</strong><span id="multiplier" class="multiplier">×1</span></div>
+        <button id="pauseButton" class="icon-button" aria-label="Pause" title="Pause (P)">Ⅱ</button>
+      </div>
+    </header>
+
+    <section id="chargeHud" class="charge-hud hidden" aria-label="Light charge">
+      <div class="charge-copy"><span data-i18n="glow">GLOW</span><span id="chargeHint">SPACE</span></div>
+      <div class="charge-track"><div id="chargeFill" class="charge-fill"></div><div id="chargeReady" class="charge-ready"></div></div>
+    </section>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="announcement" class="sr-only" aria-live="polite"></div>
+
+    <section id="menuScreen" class="screen visible" aria-labelledby="gameTitle">
+      <div class="screen-top">
+        <div class="language-wrap">
+          <span aria-hidden="true">◎</span>
+          <select id="languageSelect" aria-label="Language">
+            <option value="en">EN</option>
+            <option value="fr">FR</option>
+            <option value="es">ES</option>
+          </select>
+        </div>
+        <button id="soundButton" class="icon-button sound-button" aria-label="Mute sound" title="Sound (M)">♪</button>
+      </div>
+      <div class="menu-content">
+        <div class="reef-mark" aria-hidden="true">
+          <svg viewBox="0 0 180 110"><path class="mark-glow" d="M15 55Q55 4 90 43Q125 4 165 55Q125 43 103 78L90 104L77 78Q55 43 15 55Z"/><path class="mark-line" d="M15 55Q55 4 90 43Q125 4 165 55M90 43L90 104"/><circle cx="72" cy="53" r="3"/><circle cx="108" cy="53" r="3"/></svg>
+        </div>
+        <p class="kicker" data-i18n="kicker">A LITTLE COURAGE GLOWS BRIGHTER</p>
+        <h1 id="gameTitle">LUMEN<br><span>REEF</span></h1>
+        <p class="menu-description" data-i18n="tagline">Skim the shadows. Gather their glow.<br>Wake a reef that forgot the sun.</p>
+        <button id="startButton" class="primary-button"><span data-i18n="dive">DIVE IN</span><span class="button-arrow">→</span></button>
+        <div class="best-line"><span data-i18n="best">BEST DIVE</span><strong id="bestScore">000000</strong></div>
+        <div class="how-to">
+          <article><div class="how-icon move-icon" aria-hidden="true">✥</div><div><strong data-i18n="moveTitle">SWIM</strong><p data-i18n="moveText">WASD · arrows · drag</p></div></article>
+          <article><div class="how-icon graze-icon" aria-hidden="true">◌</div><div><strong data-i18n="grazeTitle">GRAZE DANGER</strong><p data-i18n="grazeText">Close enough to glow, not collide.</p></div></article>
+          <article><div class="how-icon pulse-icon" aria-hidden="true">✦</div><div><strong data-i18n="pulseTitle">PULSE</strong><p data-i18n="pulseText">Space or the glow button.</p></div></article>
+        </div>
+        <p class="menu-footnote" data-i18n="objectiveText">Purify two tides, choose a gift, then face the Gloom Maw.</p>
+      </div>
+    </section>
+
+    <section id="modalScreen" class="screen modal-screen" aria-live="polite">
+      <div id="modalCard" class="modal-card"></div>
+    </section>
+
+    <div id="touchControls" class="touch-controls hidden" aria-hidden="true">
+      <div id="joystick" class="joystick"><div id="joystickKnob" class="joystick-knob"></div></div>
+      <button id="pulseButton" class="pulse-button" tabindex="-1"><span>✦</span><small data-i18n="pulse">PULSE</small></button>
+    </div>
+
+    <footer class="footer-note"><span>Made with Kimi</span><span>v1.0</span></footer>
+  </main>
+  <script>/*__GAME__*/</script>
+</body>
+</html>
