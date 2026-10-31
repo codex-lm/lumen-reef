@@ -10,7 +10,7 @@ The committed `index.html` is self-contained. Serve it with any static HTTP serv
 python -m http.server 8080
 ```
 
-Then open `http://localhost:8080`. After editing the sources, rebuild the playable entrypoint with `python build.py`.
+Then open `http://localhost:8080`. No build is needed on this static-export branch.
 
 ## How to play
 
@@ -27,15 +27,15 @@ English is the default language; French and Spanish are available from the menu.
 
 Three tides, three regular enemy families, a two-phase boss, eight stacking gifts, combo scoring and local best scores. All visuals are drawn with original Canvas code. All sounds are synthesized with Web Audio after a player gesture.
 
-## Files
+## Files and development
 
-- `src/index.template.html`, `src/styles.css`, `src/game.js`: editable game sources.
-- `build.py`: standard-library build that inlines CSS and JavaScript into the playable `index.html` required by LOB7.
+- `src/index.template.html`, `src/styles.css`, `src/game.js`: editable game sources retained in the export.
 - `index.html`: generated, committed static export.
 - `art/cover.png`: original LOB7 cover image.
-- `art/render_cover.py`: editable generator for the cover; requires Pillow only when regenerating it.
 - `LOB7-GAME.json`, `LOB7-ATTRIBUTION.json`: publication metadata.
 - `CREDITS.md`, `LICENSE`: provenance and permissions.
+
+The [`development` branch](https://github.com/codex-lm/lumen-reef/tree/development) also contains `build.py`, which rebuilds the self-contained entrypoint, and `art/render_cover.py`, the optional Pillow cover generator. This export corresponds to development commit [`89c06d0e525ec376026064e7a72e8ede3f843d5c`](https://github.com/codex-lm/lumen-reef/commit/89c06d0e525ec376026064e7a72e8ede3f843d5c).
 
 ## Licence
 
