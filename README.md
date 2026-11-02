@@ -35,7 +35,7 @@ Three tides, three regular enemy families, a two-phase boss, eight stacking gift
 - `LOB7-GAME.json`, `LOB7-ATTRIBUTION.json`: publication metadata.
 - `CREDITS.md`, `LICENSE`: provenance and permissions.
 
-The [`development` branch](https://github.com/codex-lm/lumen-reef/tree/development) also contains `build.py`, which rebuilds the self-contained entrypoint, and `art/render_cover.py`, the optional Pillow cover generator. This export corresponds to development commit [`89c06d0e525ec376026064e7a72e8ede3f843d5c`](https://github.com/codex-lm/lumen-reef/commit/89c06d0e525ec376026064e7a72e8ede3f843d5c).
+The [`development` branch](https://github.com/codex-lm/lumen-reef/tree/development) also contains `build.py`, which rebuilds the self-contained entrypoint, and `art/render_cover.py`, the optional Pillow cover generator. This export corresponds to development commit [`1882524ed42ad76780169e1104d407742fe93f6d`](https://github.com/codex-lm/lumen-reef/commit/1882524ed42ad76780169e1104d407742fe93f6d).
 
 ## Licence
 
